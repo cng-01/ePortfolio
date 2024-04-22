@@ -48,6 +48,37 @@ nav ul li a {
     justify-content: center;
     color: white;
     text-align: center;
+    animation: backgroundZoom 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundZoom {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.intro-text {
+    animation: fadeInUp 1.5s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
 }
 
 .content-section {
@@ -118,6 +149,7 @@ p {
     display: flex; /* Remove any extra space below the image */
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
 }
 
 .project-image2 {
@@ -143,5 +175,82 @@ figcaption {
     .projects-grid {
         grid-template-columns: 1fr; /* One column for mobile */
     }
+}
+
+
+.contact-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #555;
+}
+
+.contact-form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.contact-header {
+    transform: translateY(0)
+}
+
+.contact-header.active {
+    transform: translateY(-100%);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.send-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #66BB6A;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
