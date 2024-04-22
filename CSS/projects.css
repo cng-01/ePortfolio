@@ -10,12 +10,12 @@ body, html {
     width: 100%;
     height: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #fff;
+    background-color: #f4f4f4; /* Lighter background for a modern look */
 }
 
 /* Navigation */
 nav {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8); /* Slightly more opaque for better readability */
     color: white;
     padding: 10px 20px;
     position: fixed;
@@ -28,21 +28,28 @@ nav a {
     color: white;
     text-decoration: none;
     margin-right: 15px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+nav a.active, nav a:hover {
+    color: #4CAF50; /* Highlight color for active or hovered links */
 }
 
 /* Header */
 .header {
-    background-image: url('assets/project-bg.jpg'); /* Placeholder, replace with actual image path */
+    background-image: url('/assets/header.jpg');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
+    padding: 70px 10px;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .header h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Text shadow for better contrast */
 }
 
 /* Project Details */
@@ -50,13 +57,21 @@ nav a {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .project-details img {
     max-width: 100%;
     height: auto;
+    display: block; /* Makes the img a block element */
+    margin: 0 auto; /* Centers the block element horizontally */
+    border-radius: 8px;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
+
 
 /* Footer */
 footer {
@@ -64,4 +79,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 40px; /* Adds space before the footer */
 }
