@@ -129,6 +129,10 @@ p {
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .project-item {
     background: white;
     border: 1px solid #ccc; /* Optional border */
