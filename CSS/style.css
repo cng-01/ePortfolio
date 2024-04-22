@@ -205,11 +205,10 @@ figcaption {
 }
 
 .contact-header {
-    transform: translateY(0)
-}
-
-.contact-header.active {
-    transform: translateY(-100%);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    transition: inherit;
 }
 
 .contact-form {

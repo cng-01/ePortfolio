@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        threshold: 0.2 // Trigger when 20% of the section is visible
+        threshold: 0.15 // Trigger when 20% of the section is visible
     });
 
     // Observing each section
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            if (pageYOffset >= (sectionTop - sectionHeight / 1.5)) {
                 current = section.getAttribute('id');
             }
         });
