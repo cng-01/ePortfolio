@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - ICT Posting Portal</title>
     <link rel="stylesheet" href="\CSS\projects.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="project1.html" class="active">Project 1</a>
-        <a href="project2.html">Project 2</a>
-        <a href="project3.html">Project 3</a>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="project1.html" class="dropdown-item">ICT Posting Portal</a></li>
+                    <li><a href="project2.html" class="dropdown-item">GPU Clicker Game</a></li>
+                    <li><a href="project3.html" class="dropdown-item">SKBuilt Website</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
     </nav>
     <header class="header">
         <h1>ICT Posting Portal</h1>

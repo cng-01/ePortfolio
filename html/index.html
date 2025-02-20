@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My ePortfolio</title>
+    <title>Carter Gorski ePortfolio</title>
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
 </head>
 <body>
     <nav id="navbar">
         <ul>
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="dropdown">
+                <a href="#projects" class="nav-link dropdown-toggle">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="project1.html" class="dropdown-item">ICT Posting Portal</a></li>
+                    <li><a href="project2.html" class="dropdown-item">GPU Clicker Game</a></li>
+                    <li><a href="project3.html" class="dropdown-item">SKBuilt Website</a></li>
+                </ul>
+            </li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
     <section id="home" class="cover" style="background-image: url('/assets/home.jpg');">
         <div class="intro-text">
             <h1>Carter Gorski ePortfolio</h1>
-            <p>Welcome to my professional world!</p>
         </div>
     </section>    
     <section id="about" class="content-section">
@@ -76,6 +83,7 @@
     </section>
     
     <script src="/js/script.js"></script>
+    <script src="/js/navbar.js"></script>
 </body>
 <footer>
     <p>&copy; 2024 Carter Gorski. All rights reserved.</p>

@@ -1,0 +1,77 @@
+nav {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensure it appears above other elements */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    top: 100%; /* Adjust this value to add space between the dropdown and the navbar */
+    margin-top: 2px; /* Additional space between the dropdown and the navbar */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

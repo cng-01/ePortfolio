@@ -13,31 +13,6 @@ body, html {
     background-color: #f4f4f4; /* Lighter background for a modern look */
 }
 
-/* Navigation */
-nav {
-    background: rgba(0, 0, 0, 0.8); /* Slightly more opaque for better readability */
-    color: white;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-    padding: 5px;
-    transition: color 0.3s;
-    list-style: none;
-}
-
-nav a.active, nav a:hover {
-    color: #4CAF50; /* Highlight color for active or hovered links */
-}
-
 /* Header */
 .header {
     background-image: url('/assets/header.jpg');

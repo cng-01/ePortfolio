@@ -61,24 +61,5 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-
-    // Updating navbar links based on scroll position
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight / 1.5)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') == '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
 });
 
