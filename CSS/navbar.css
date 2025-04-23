@@ -16,19 +16,26 @@ nav ul {
 
 nav ul li {
     margin: 0 20px;
+    cursor: pointer; /* Ensure the entire list item is clickable */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    display: block;
+    display: block; /* Ensure the link spans the full clickable area */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 /* Dropdown Styling */
 .dropdown {
     position: relative;
     display: inline-block;
+    cursor: pointer; /* Ensure the dropdown parent shows a pointer cursor */
+}
+
+.dropdown a {
+    cursor: pointer; /* Ensure the dropdown link shows a pointer cursor */
 }
 
 .dropdown-menu {
@@ -47,6 +54,7 @@ nav ul li a {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     display: flex;
     flex-direction: column;
+    padding: 0; /* Remove any padding from the dropdown container */
 }
 
 .dropdown-menu.show {
@@ -57,19 +65,26 @@ nav ul li a {
 
 .dropdown-menu li {
     list-style: none;
-    padding: 10px;
+    padding: 0; /* Remove padding from the list item */
+    margin: 0; /* Remove margin from the list item */
+    width: 100%; /* Ensure the list item spans the full width */
 }
 
 .dropdown-menu a {
     color: white;
     text-decoration: none;
+    display: block; /* Make the anchor tag a block element */
+    width: 100%; /* Ensure it spans the full width of the parent */
+    height: 100%; /* Ensure it spans the full height of the parent */
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's dimensions */
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.5; /* Adjust line height for better vertical alignment */
+    cursor: pointer; /* Change cursor to pointer */
 }
 
 .dropdown-menu a:hover {
-    background-color: #444;
-    display: block;
-    width: 100%;
-    border-radius: 5px;
+    background-color:  rgba(44, 44, 44, 0.5);
 }
 
 .dropdown:hover .dropdown-menu {
