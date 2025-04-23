@@ -76,10 +76,13 @@
             <button id="contactBtn" class="contact-btn">Get In Touch</button>
         </div>
         <div id="contactFormContainer" class="contact-form-container" style="display: none;">
-            <form id="contactForm" class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required />
-                <input type="email" id="email" placeholder="Your Email" required />
-                <textarea id="message" placeholder="Your Message" required></textarea>
+            <form action="https://formspree.io/f/xjkwvrnv" 
+                  method="POST" 
+                  id="contactForm" 
+                  class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" class="send-btn">Send Message</button>
             </form>
         </div>
