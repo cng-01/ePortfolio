@@ -23,12 +23,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for form submission
     contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent actual form submission
+        event.preventDefault();
+    
         if (this.reportValidity()) {
-            alert('Your message has been sent successfully!');
-            toggleFormVisibility();
+            const formData = new FormData(contactForm);
+    
+            fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Your message has been sent successfully!');
+                    contactForm.reset();
+                    toggleFormVisibility();
+                } else {
+                    alert('There was a problem sending your message. Please try again.');
+                }
+            }).catch(error => {
+                alert('There was a network error. Please try again.');
+            });
         }
     });
+    
 
     // Click event listener on the window to detect clicks outside the form
     window.addEventListener('click', function(event) {
